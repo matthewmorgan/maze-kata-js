@@ -35,7 +35,12 @@ describe('Maze business class can', () => {
     expect(maze.constructor.name).toEqual('Maze');
   });
 
-  test('skip a test marked with "xtest" instead of "test"', () => {
+  test('solve returns the solution', () => {
+    const maze = new Maze(SIMPLE_MAZE);
+    expect(maze.solve()).toEqual('you wish!');
+  });
+
+  xtest('skip a test marked with "xtest" instead of "test"', () => {
     expect(null).toEqual(null);
   });
 });
